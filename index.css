@@ -1,0 +1,173 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Navigation */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 120px;
+    font-size: 25px;
+    background: rgb(43, 43, 100);
+    color: white;
+    flex-wrap: wrap;
+}
+
+.span {
+    color: yellow;
+}
+
+/* Hero Section */
+.hero {
+    
+    background: rgb(14, 14, 45);
+    color: white;
+    padding: 100px 120px;
+}
+
+/* Heading and Description */
+.first h2 {
+    padding: 50px 0px;
+    font-size: 30px;
+}
+
+.sec h4 {
+    padding: 0px 0px 50px 0px;
+    font-size: 20px;
+    line-height: 40px;
+}
+
+/* Button */
+.btn button {
+    padding: 20px 50px;
+    background: yellow;
+    color: black;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.btn button a {
+    text-decoration: none;
+    color: black;
+    font-weight: bolder;
+}
+
+.btn button:hover {
+    background: rgb(101, 101, 28);
+}
+.footer{
+    background: rgb(43, 43, 100);
+    color: white;
+    padding: 70px 120px;
+}
+.footer h3{
+    padding: 0px 0px 50px 0px;
+    font-size: 30px;
+}
+.point p {
+    padding: 0px 0px 15px 0px;
+    font-size: 20px;
+}
+
+/* ✅ Media Queries for Responsiveness */
+
+/* Tablets (width below 1024px) */
+@media screen and (max-width: 1024px) {
+    .nav {
+        padding: 20px 60px;
+        font-size: 22px;
+    }
+    
+    .hero {
+        padding: 80px 60px;
+    }
+
+    .first h2 {
+        font-size: 26px;
+    }
+
+    .sec h4 {
+        font-size: 18px;
+        line-height: 35px;
+    }
+
+    .btn button {
+        padding: 15px 40px;
+    }
+    .footer{
+        padding: 0px 10px;
+    }
+}
+/* Tablets and small laptops (up to 1200px) */
+@media screen and (max-width: 1200px) {
+    /* .nav {
+        padding: 20px 60px;
+        font-size: 22px;
+    } */
+/* 
+    .hero {
+        padding: 80px 60px;
+    } */
+
+    .first h2 {
+        font-size: 46px;
+    }
+
+    .sec h4 {
+        font-size: 30px;
+        line-height: 45px;
+       
+    }
+
+    .btn button {
+        padding: 15px 40px;
+    }
+
+    .footer {
+        padding: 40px 60px;
+        height: 500px;
+    }
+    .footer h3{
+        font-size: 30px;
+    }
+    .point p{
+        font-size: 20px;
+    }
+}
+
+/* Phones (width below 768px) */
+@media screen and (max-width: 768px) {
+    .nav {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px 20px;
+        font-size: 20px;
+    }
+
+    .hero {
+        padding: 60px 20px;
+    }
+
+    .first h2 {
+        font-size: 22px;
+        padding: 30px 0;
+    }
+
+    .sec h4 {
+        font-size: 16px;
+        line-height: 30px;
+        padding: 0 0 30px 0;
+    }
+
+    .btn button {
+        padding: 12px 30px;
+        font-size: 14px;
+    }
+        .footer{
+        padding: 0px 10px;
+    }
+}
