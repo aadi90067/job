@@ -1,0 +1,96 @@
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      height: 100%;
+      background: rgb(43, 43, 100);
+      font-family: Arial, sans-serif;
+    }
+
+    /* Navigation */
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 120px;
+      font-size: 25px;
+      background: rgb(43, 43, 100);
+      color: white;
+      flex-wrap: wrap;
+    }
+
+    .span {
+      color: yellow;
+    }
+
+    /* Hero Section */
+    .hero {
+      min-height: calc(100vh - 80px); /* subtract nav height if needed */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 40px 20px;
+    }
+
+    /* Sign In Form Box */
+    .sign_page {
+      background: rgb(14, 14, 45);
+      border-radius: 20px;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-size: 28px;
+      padding: 40px;
+      width: 100%;
+      max-width: 700px;
+    }
+
+    .sign_page div {
+      margin: 15px 0;
+      width: 100%;
+    }
+
+    .sign_page input {
+      padding: 15px 20px;
+      border-radius: 20px;
+      border: none;
+      width: 100%;
+      font-size: 18px;
+      text-align: left; /* ✅ keeps input text starting from left */
+    }
+
+    .sign_page button {
+      padding: 15px 40px;
+      background: yellow;
+      color: black;
+      font-weight: bold;
+      border-radius: 20px;
+      border: none;
+      cursor: pointer;
+      font-size: 18px;
+      margin-top: 20px;
+    }
+
+    .sign_page button:hover {
+      background: rgb(101, 101, 28);
+    }
+.hero h4{
+  color: white;
+  margin-top: 10px;
+}
+.hero h4 a{
+  text-decoration: none;
+  color: yellow;
+}
+@media screen and (max-width: 1024px) {
+    .nav {
+        padding: 20px 60px;
+        font-size: 22px;
+    }
+  }
