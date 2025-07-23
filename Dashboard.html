@@ -1,97 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
-    <link rel="stylesheet" href="Dashboard.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Job Tracker Dashboard</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="Dashboard.css" />
 </head>
 <body>
-    <nav>
-        <div class="logo">Job Tracker</div>
-        <ul class="list">
-            <a href="">Dashboard</a>
-            <a href="">Settings</a>
-        </ul>
-    </nav>
-    <div class="hero">
-        <div class="job_add"></div>
-        
-        <h1 class="h1">Job Application</h1>
-        <div class="one">
-        <h3>DASHBOARD</h3> <button onclick="Show()">Add job</button>
-        </div>
-        <div class="from" id="from">
-        <form action="" onsubmit="return handleSubmit(event)" class="form">
-            <input id="jobTitle" type="text" placeholder="Job Tittle">
-            <input id="company" type="text" placeholder="Company">
-            <input id="jobDate" type="date">
-              <select name="Start" id="Start" class="Start">
-                <option value="mango">Pending</option>
-                <option value="banana">Interview</option>
-                <option value="apple">Rejected</option>
-                <option value="grapes">Accepted</option>
-              </select>
-              <button  class="submit"  type="submit">Submit</button>
+  <nav class="sidebar">
+    <div class="logo"><span class="material-icons">work</span> Job Tracker</div>
+    <ul class="side-list">
+      <li><a href="#" class="active"><span class="material-icons">dashboard</span>Dashboard</a></li>
+      <li><a href="#"><span class="material-icons">settings</span>Settings</a></li>
+    </ul>
+  </nav>
+  <main>
+      <section class="dashboard-top">
+        <h1>Job Applications</h1>
+        <button class="add-job-btn" onclick="showForm()">+ Add Job</button>
+      </section>
+
+      <section class="job-form-wrapper" id="jobFormWrapper">
+        <form onsubmit="return handleSubmit(event)" class="job-form" id="jobForm">
+          <label>
+            Job Title
+            <input id="jobTitle" type="text" placeholder="Job Title"/>
+          </label>
+          <label>
+            Company
+            <input id="company" type="text" placeholder="Company"/>
+          </label>
+          <label>
+            Date
+            <input id="jobDate" type="date"/>
+          </label>
+          <label>
+            Status
+            <select id="Start" class="Start">
+              <option value="Pending">Pending</option>
+              <option value="Interview">Interview</option>
+              <option value="Rejected">Rejected</option>
+              <option value="Accepted">Accepted</option>
+            </select>
+          </label>
+          <div class="form-btn-row">
+            <button class="submit" type="submit" id="submitBtn">Submit</button>
+            <button class="cancel" type="button" onclick="hideForm()">Cancel</button>
+          </div>
         </form>
-        </div>
-        </div>
-        <div class="table-wrapper">
+      </section>
+
+      <div class="table-wrapper">
         <table class="tab">
           <thead>
-            <th>jobTitle</th>
-            <th>company</th>
-            <th>jobDate</th>
-            <th>Start</th>
+            <tr>
+              <th>Job Title</th>
+              <th>Company</th>
+              <th>Date</th>
+              <th>Status</th>
+              <th>Action</th>
+            </tr>
           </thead>
-          <tbody id="bodytable">
-            <!-- add tr -->
-          </tbody>
+          <tbody id="bodytable"></tbody>
         </table>
-        </div>
-    </div>
+      </div>
+  </main>
+  <script src="Dashboard.js"></script>
 </body>
-<script>
-function Show(){
-let sho = document.getElementById("from")
-sho.style.display="block"
-}
-
-function handleSubmit(event) {
-
-     event.preventDefault();
-
-  let jobTitle = document.getElementById("jobTitle").value.trim();
-  let company = document.getElementById("company").value.trim();
-  let jobDate = document.getElementById("jobDate").value;
-  let status = document.getElementById("Start").value;
-
-  if (!jobTitle || !company || !jobDate || !status) {
-    alert("Please fill all the input fields");
-    return false; // prevent form submission
-  }
-
-  let tablebody = document.getElementById("bodytable")
-  let new_row = document.createElement("tr")
-
-  // cart
-  let titlecell = document.createElement("td")
-  let companycell = document.createElement("td")
-  let Datecell = document.createElement("td")
-  let stautcell=document.createElement("td")
-
-  // value
-  titlecell.textContent = jobTitle
-  companycell.textContent = company
-  Datecell.textContent = jobDate
-  stautcell.textContent = status
-
-  // append
-  new_row.appendChild(titlecell)
-  new_row.appendChild(companycell)
-  new_row.appendChild(Datecell)
-  new_row.appendChild(stautcell)
-  tablebody.appendChild(new_row)
-}
-</script>
 </html>

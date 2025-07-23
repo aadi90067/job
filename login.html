@@ -1,33 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="signUp.css">
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Sign In | Job Tracker</title>
+ <link rel="stylesheet" href="signUp.css">
 </head>
 <body>
-    <nav class="nav">
-        <h3 class="logo">A & P <span class="span">DevS</span> </h3>
-        <h3 class="line">Job tracking with us mean with aadi </h3>
-    </nav>
-    <section class="hero">
-        <div class="sign_page">
-            <div>
-                <label for="name">Name :</label><br>
-                <input type="text" id="name">
-            </div>
-                        <div>
-                <label for="email">email :</label><br>
-                <input type="email" id="email">
-            </div>
-                        <div>
-                <label for="password">Password :</label><br>
-                <input type="password" id="password">
-            </div>
-            <button><a href="Dashboard.html">Login</a></button>
-        </div>
-        <h4>if you have don't account on that website then <span><a href="signUp.css">Go signUP</a></span></h4>
-    </section>
+ <nav class="nav">
+  <h3 class="logo">A &amp; P <span class="span">DevS</span></h3>
+  <h3 class="line">Job tracking with us means with aadi</h3>
+ </nav>
+ <section class="hero">
+  <form class="sign_page" id="loginForm" autocomplete="off">
+   <div>
+    <label for="name">Name</label>
+    <input type="text" id="name" placeholder="Your Name" required>
+   </div>
+   <div>
+    <label for="email">Email</label>
+    <input type="email" id="email" placeholder="your@email.com" required>
+   </div>
+   <div>
+    <label for="password">Password</label>
+    <input type="password" id="password" placeholder="Password" required>
+   </div>
+   <button type="submit" class="signin-btn">Login</button>
+  </form>
+  <h4>If you don't have an account, <span><a href="signUp.html">Go sign up</a></span></h4>
+ </section>
+ <script>
+ // Demo: login redirects
+ document.getElementById('loginForm').addEventListener('submit', function(ev){
+  ev.preventDefault();
+  window.location.href = "Dashboard.html";
+ });
+ </script>
 </body>
 </html>

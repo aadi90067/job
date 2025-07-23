@@ -1,173 +1,173 @@
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+/* ----------- Base Reset & Variables ----------- */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --main-bg: #15152b;
+  --nav-bg: #21214e;
+  --accent: #ffe44b;
+  --footer-bg: #24245a;
+  --text-main: #fff;
+  --footer-p: #f0f0f5;
+  --button-shadow: 0 8px 24px rgba(0,0,0,0.11);
 }
 
-/* Navigation */
+body {
+  font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+  background: var(--main-bg);
+  color: var(--text-main);
+  min-height: 100vh;
+}
+
+/* ----------- Navigation Bar ----------- */
 .nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 120px;
-    font-size: 25px;
-    background: rgb(43, 43, 100);
-    color: white;
-    flex-wrap: wrap;
+  width: 100%;
+  background: var(--nav-bg);
+  color: var(--text-main);
+  padding: 32px 8vw 22px 8vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 2rem;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.05);
 }
-
+.logo {
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-size: 2.5rem;
+}
 .span {
-    color: yellow;
+  color: var(--accent);
+  font-weight: bolder;
+  letter-spacing: 0.5px;
+}
+.line {
+  font-size: 1.05em;
+  font-weight: 400;
+  opacity: .8;
+  text-align: right;
 }
 
-/* Hero Section */
+@media (max-width: 600px) {
+  .nav {
+    flex-direction: column;
+    gap: 14px;
+    font-size: 1.1rem;
+    padding: 22px 20px 10px 20px;
+    text-align: left;
+  }
+  .logo {
+    font-size: 1.6rem;
+  }
+  .line {
+    font-size: 0.98rem;
+    text-align: left;
+  }
+}
+
+/* ----------- Hero Section ----------- */
 .hero {
-    
-    background: rgb(14, 14, 45);
-    color: white;
-    padding: 100px 120px;
+  background: linear-gradient(120deg, #16163c 80%, #4040b1 100%);
+  padding: 70px 10vw 50px 10vw;
+  text-align: left;
+  min-height: 330px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
-/* Heading and Description */
 .first h2 {
-    padding: 50px 0px;
-    font-size: 30px;
+  font-size: 2.2rem;
+  margin: 0 0 30px 0;
+  font-weight: 700;
+  color: var(--accent);
+  letter-spacing: 0.5px;
 }
-
 .sec h4 {
-    padding: 0px 0px 50px 0px;
-    font-size: 20px;
-    line-height: 40px;
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 2.1;
+  margin-bottom: 40px;
+  color: #fafaf7;
+  opacity: 0.98;
 }
 
-/* Button */
-.btn button {
-    padding: 20px 50px;
-    background: yellow;
-    color: black;
-    border-radius: 20px;
-    border: none;
-    cursor: pointer;
+/* ----------- Call-to-action Button ----------- */
+.btn {
+  margin: 25px 0 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.hero-btn {
+  display: inline-block;
+  padding: 18px 48px;
+  background: var(--accent);
+  color: #2a2a22;
+  border-radius: 25px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  box-shadow: var(--button-shadow);
+  border: none;
+  outline: none;
+  cursor: pointer;
+  text-decoration: none;
+  letter-spacing: 1px;
+  transition: background 0.18s, color 0.18s, transform 0.12s;
+}
+.hero-btn:hover, .hero-btn:focus {
+  background: #ebe46d;
+  color: #15152b;
+  transform: translateY(-2px) scale(1.02);
 }
 
-.btn button a {
-    text-decoration: none;
-    color: black;
-    font-weight: bolder;
+/* ----------- Footer Section ----------- */
+.footer {
+  background: var(--footer-bg);
+  color: var(--text-main);
+  padding: 55px 10vw 40px 10vw;
+  margin-top: 32px;
 }
-
-.btn button:hover {
-    background: rgb(101, 101, 28);
-}
-.footer{
-    background: rgb(43, 43, 100);
-    color: white;
-    padding: 70px 120px;
-}
-.footer h3{
-    padding: 0px 0px 50px 0px;
-    font-size: 30px;
+.footer h3 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  letter-spacing: 1px;
 }
 .point p {
-    padding: 0px 0px 15px 0px;
-    font-size: 20px;
+  font-size: 1.14rem;
+  color: var(--footer-p);
+  margin-bottom: 21px;
+  font-weight: 400;
+  letter-spacing: 0.1px;
+  line-height: 1.7;
+  transition: color 0.19s;
 }
 
-/* ✅ Media Queries for Responsiveness */
-
-/* Tablets (width below 1024px) */
-@media screen and (max-width: 1024px) {
-    .nav {
-        padding: 20px 60px;
-        font-size: 22px;
-    }
-    
-    .hero {
-        padding: 80px 60px;
-    }
-
-    .first h2 {
-        font-size: 26px;
-    }
-
-    .sec h4 {
-        font-size: 18px;
-        line-height: 35px;
-    }
-
-    .btn button {
-        padding: 15px 40px;
-    }
-    .footer{
-        padding: 0px 10px;
-    }
-}
-/* Tablets and small laptops (up to 1200px) */
-@media screen and (max-width: 1200px) {
-    /* .nav {
-        padding: 20px 60px;
-        font-size: 22px;
-    } */
-/* 
-    .hero {
-        padding: 80px 60px;
-    } */
-
-    .first h2 {
-        font-size: 46px;
-    }
-
-    .sec h4 {
-        font-size: 30px;
-        line-height: 45px;
-       
-    }
-
-    .btn button {
-        padding: 15px 40px;
-    }
-
-    .footer {
-        padding: 40px 60px;
-        height: 500px;
-    }
-    .footer h3{
-        font-size: 30px;
-    }
-    .point p{
-        font-size: 20px;
-    }
+@media (max-width: 900px) {
+  .nav, .footer, .hero {
+    padding-left: 3vw;
+    padding-right: 3vw;
+  }
+  .first h2 { font-size: 1.5rem; }
+  .sec h4 { font-size: 1.02rem; }
+  .hero-btn { padding: 14px 32px; font-size: 1.05rem; }
 }
 
-/* Phones (width below 768px) */
-@media screen and (max-width: 768px) {
-    .nav {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 20px 20px;
-        font-size: 20px;
-    }
+@media (max-width: 650px) {
+  .first h2 { font-size: 1.1rem; }
+  .sec h4 { font-size: .94rem; }
+  .footer h3 { font-size: 1.2rem; }
+  .point p { font-size: 1rem; }
+  .footer, .hero { padding: 38px 10px 25px 10px; }
+  .nav { font-size: 0.95rem; }
+}
 
-    .hero {
-        padding: 60px 20px;
-    }
+@media (max-width: 400px) {
+  .footer, .hero { padding: 19px 1vw 14px 1vw; }
+  .nav { padding: 10px 4px 6px 4px; }
+  .logo { font-size: 0.9rem; }
+}
 
-    .first h2 {
-        font-size: 22px;
-        padding: 30px 0;
-    }
-
-    .sec h4 {
-        font-size: 16px;
-        line-height: 30px;
-        padding: 0 0 30px 0;
-    }
-
-    .btn button {
-        padding: 12px 30px;
-        font-size: 14px;
-    }
-        .footer{
-        padding: 0px 10px;
-    }
+/* Add nice transitions */
+.nav, .footer, .hero, .hero-btn, .point p {
+  transition: background .22s, color .22s, font-size .16s, padding .19s;
 }
