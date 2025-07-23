@@ -1,164 +1,144 @@
-* {
- margin: 0;
- padding: 0;
- box-sizing: border-box;
-}
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
 :root {
- --main-bg: #24245a;
- --nav-bg: #21214e;
- --accent: #ffe44b;
- --input-bg: #181837;
- --input-border: #33345b;
- --btn-hover: #e2dd4a;
- --form-bg: rgba(22, 22, 49, 0.98);
- --text-main: #fff;
+  --main-bg: #24245a;
+  --nav-bg: #21214e;
+  --accent: #ffe44b;
+  --input-bg: #181837;
+  --input-border: #33345b;
+  --btn-hover: #e2dd4a;
+  --form-bg: rgba(22, 22, 49, 0.98);
+  --text-main: #fff;
 }
 
 body, html {
- min-height: 100%;
- background: var(--main-bg);
- font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+  min-height: 100%;
+  background: var(--main-bg);
+  font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
 }
 
 .nav {
- width: 100%;
- min-height: 70px;
- padding: 24px 10vw 16px 10vw;
- display: flex;
- align-items: center;
- justify-content: space-between;
- background: var(--nav-bg);
- color: var(--text-main);
- font-size: 2rem;
- box-shadow: 0 2px 18px rgba(0,0,0,0.03);
+  width: 100%;
+  min-height: 70px;
+  padding: 24px 10vw 16px 10vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--nav-bg);
+  color: var(--text-main);
+  font-size: 2rem;
+  box-shadow: 0 2px 18px rgba(0,0,0,0.03);
 }
 .logo {
- font-weight: bold;
- letter-spacing: 1px;
- font-size: 2.4rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-size: 2.4rem;
 }
 .span {
- color: var(--accent);
- font-weight: 700;
+  color: var(--accent);
+  font-weight: 700;
 }
 .line {
- font-size: 1.08em;
- font-weight: 500;
- opacity: 0.85;
- text-align: right;
+  font-size: 1.08em;
+  font-weight: 500;
+  opacity: 0.85;
+  text-align: right;
 }
 
 @media (max-width: 600px) {
- .nav {
-  flex-direction: column;
-  gap: 12px;
-  font-size: 1.1rem;
-  padding: 20px 18px 8px 18px;
-  text-align: left;
- }
- .logo { font-size: 1.35rem; }
- .line { font-size: 0.99rem; text-align: left; }
+  .nav { flex-direction: column; gap: 12px; font-size: 1.1rem; padding: 20px 18px 8px 18px; text-align: left; }
+  .logo { font-size: 1.35rem; }
+  .line { font-size: 0.99rem; text-align: left; }
 }
 
-/* --- Hero Section and Glass Form --- */
 .hero {
- min-height: calc(100vh - 80px);
- display: flex;
- flex-direction: column;
- justify-content: center;
- align-items: center;
- padding: 50px 16px 24px 16px;
+  min-height: calc(100vh - 80px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 16px 24px 16px;
 }
 .sign_page {
- width: 100%;
- max-width: 360px;
- background: var(--form-bg);
- border-radius: 23px;
- box-shadow: 0 16px 48px 0 rgba(0,0,0,0.13);
- padding: 40px 28px 26px 28px;
- color: var(--text-main);
- display: flex;
- flex-direction: column;
- gap: 17px;
- margin-bottom: 26px;
+  width: 100%;
+  max-width: 360px;
+  background: var(--form-bg);
+  border-radius: 23px;
+  box-shadow: 0 16px 48px 0 rgba(0,0,0,0.13);
+  padding: 40px 28px 26px 28px;
+  color: var(--text-main);
+  display: flex;
+  flex-direction: column;
+  gap: 19px;
+  margin-bottom: 26px;
 }
-
 .sign_page label {
- font-size: 1rem;
- font-weight: 500;
- color: #ffeec1;
- margin-bottom: 6px;
- display: block;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #ffeec1;
+  margin-bottom: 6px;
+  display: block;
 }
-
 .sign_page input {
- padding: 12px 15px;
- border-radius: 13px;
- border: 1px solid var(--input-border);
- background: var(--input-bg);
- color: #fafaff;
- width: 100%;
- font-size: 1.06rem;
- outline: none;
- margin-top: 4px;
- margin-bottom: 2px;
- transition: border 0.19s, box-shadow 0.15s;
+  padding: 12px 15px;
+  border-radius: 13px;
+  border: 1px solid var(--input-border);
+  background: var(--input-bg);
+  color: #fafaff;
+  width: 100%;
+  font-size: 1.06rem;
+  outline: none;
+  margin-top: 4px;
+  margin-bottom: 2px;
+  transition: border 0.19s, box-shadow 0.15s;
 }
 .sign_page input:focus {
- border: 1.5px solid var(--accent);
- background: #232349;
- box-shadow: 0 0 0 2px #fffaab55;
+  border: 1.5px solid var(--accent);
+  background: #232349;
+  box-shadow: 0 0 0 2px #fffaab55;
 }
-
 .signin-btn {
- width: 100%;
- padding: 13px 0;
- background: var(--accent);
- color: #181837;
- font-size: 1.15rem;
- font-weight: 700;
- border-radius: 13px;
- border: none;
- cursor: pointer;
- letter-spacing: .5px;
- transition: background 0.16s, color 0.13s, transform 0.12s;
- margin-top: 8px;
- box-shadow: 0 4px 18px -2px #fff89a06;
+  width: 100%;
+  padding: 13px 0;
+  background: var(--accent);
+  color: #181837;
+  font-size: 1.15rem;
+  font-weight: 700;
+  border-radius: 13px;
+  border: none;
+  cursor: pointer;
+  letter-spacing: .5px;
+  transition: background 0.16s, color 0.13s, transform 0.12s;
+  margin-top: 8px;
+  box-shadow: 0 4px 18px -2px #fff89a06;
 }
 .signin-btn:hover, .signin-btn:focus {
- background: var(--btn-hover);
- color: #15152b;
- transform: scale(1.01) translateY(-2px);
+  background: var(--btn-hover);
+  color: #15152b;
+  transform: scale(1.01) translateY(-2px);
 }
-
-/* --- Responsive layout tweaks --- */
 @media (max-width: 900px) {
- .nav { padding: 20px 5vw 8px 5vw; font-size: 1.4rem;}
- .sign_page { max-width: 98vw; padding: 29px 8vw;}
- .logo {font-size: 1.11rem;}
+  .nav { padding: 20px 5vw 8px 5vw; font-size: 1.4rem;}
+  .sign_page { max-width: 98vw; padding: 29px 8vw;}
+  .logo {font-size: 1.11rem;}
 }
 @media (max-width: 490px) {
- .sign_page { padding: 17px 2vw; }
+  .sign_page { padding: 17px 2vw; }
 }
-
-/* --- Message/Link --- */
 .hero h4 {
- color: var(--text-main);
- margin-top: 16px;
- font-size: 1.01rem;
- text-align: center;
- letter-spacing: 0.1px;
+  color: var(--text-main);
+  margin-top: 16px;
+  font-size: 1.01rem;
+  text-align: center;
+  letter-spacing: 0.1px;
 }
 .hero h4 a {
- text-decoration: underline;
- color: var(--accent);
- font-weight: bold;
- transition: color 0.2s;
+  text-decoration: underline;
+  color: var(--accent);
+  font-weight: bold;
+  transition: color 0.2s;
 }
 .hero h4 a:hover { color: #fff388; }
-
-/* --- Smooth transitions everywhere --- */
 input, .signin-btn, .sign_page, .hero h4 a {
- transition: all 0.19s;
+  transition: all 0.19s;
 }
